@@ -1,0 +1,105 @@
+@import './common.sass'
+
+
+.filter
+    width: 6.3rem
+    height: 100vh
+    background: $whiteColor
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 100
+    overflow: auto
+    @include animation(filt,.5s)
+    .filter_title
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        font-size: .36rem
+        color: $fontColor
+        font-weight: 700
+        position: relative
+        .back
+            position: absolute
+            left: .3rem
+    .filter_list
+        li
+            height: 1rem
+            line-height: 1rem
+            @include border_b(1px,$borderColor)
+            font-size: .3rem
+            color: $fontColor
+            position: relative
+            @include padding_l(.3rem)
+            @include padding_r(.8rem)
+            .filter_name
+                float: left
+                &.on
+                    color: $blueColor
+            .filter_value
+                float: right
+                font-size: .24rem
+                color: #666
+            .go
+                position: absolute
+                right: .3rem
+                top: 0
+                color: #999
+
+    .bottom_btn
+        height: 1rem
+        line-height: 1rem
+        border-top: 1px solid $borderColor
+        position: absolute
+        bottom: 0
+        .clear
+            width: 3.15rem
+            text-align: center
+            float: left
+            font-size: .32rem
+            color: $fontColor
+        .filter_submit
+            @extend .clear
+            background: $blueColor
+            color: $whiteColor
+    .filter_search
+        width: 100%
+        height: 1.2rem
+        background: #f5f5f5
+        @include padding(.2rem)
+        .search_box
+            background: $whiteColor
+            height: .8rem
+            line-height: .8rem
+            .search_icon
+                font-size: .3rem
+                color: #666
+                position: relative
+                top: .04rem
+                @include padding_r(.2rem)
+                @include padding_l(.2rem)
+                &:after
+                    content: ''
+                    display: block
+                    width: .01rem
+                    height: .4rem
+                    background: #ccc
+                    position: absolute
+                    right: 0
+                    top: -.04rem
+            input
+                width: 80%
+                height: .4rem
+                line-height: .4rem
+                background: $whiteColor
+                border: none
+                position: relative
+                @include padding_l(.2rem)
+
+
+
+@keyframes filt
+    from
+        right: -6rem
+    to
+        right: 0

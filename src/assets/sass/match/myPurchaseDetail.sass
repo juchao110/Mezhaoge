@@ -1,0 +1,485 @@
+@import '../common.sass'
+
+
+.my_purchase_detail
+    width: 100%
+    height: auto
+    background: #f5f5f5
+    @include padding_b(1.4rem)
+    @include padding_t(.9rem)
+    &>*
+        background: $whiteColor
+    .title_head
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 9
+        font-weight: 700
+        .back
+            font-weight: normal
+        .more
+            font-weight: normal
+        .more_box
+            position: fixed
+            z-index: 1000
+            top: .6rem
+            right: 0.1rem
+            width: 2.4rem
+            background: $blueColor
+            color: $whiteColor
+            border-radius: .08rem
+            font-weight: normal
+            @include animation(showbox,.5s)
+            &:before
+                content: ""
+                border: .05rem solid transparent
+                border-bottom-color: $blueColor
+                position: absolute
+                top: -.2rem
+                right: .24rem
+            &::after
+                content: ""
+                border: 5px solid transparent
+                border-bottom-color: $blueColor
+                position: absolute
+                top: -.2rem
+                right: .24rem
+            .more_btn_box
+                overflow: hidden
+                .check_btn_box
+                    @include border_b(.01rem,$whiteColor)
+                    padding: 0 .2rem
+                    height: .79rem
+                    line-height: .79rem
+                    font-size: .24rem
+                    text-align: left
+                li:nth-last-child(1)
+                    border-bottom: none
+                    .home_icon
+                        font-size: .3rem
+    .checking
+        height: .8rem
+        line-height: .8rem
+        background: #fdf1e5
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        p
+            float: left
+            font-size: .36rem
+            color: $redColor
+            font-weight: 700
+        .time
+            float: right
+            font-size: .24rem
+            color: $redColor
+            .time_box
+                @include padding_a(.04rem,.1rem,.04rem,.1rem)
+                background: $redColor
+                color: $whiteColor
+                @include border_radius(.05rem)
+    .fail
+        @extend .checking
+        background: #999
+        p
+            color: $whiteColor
+    .success
+        @extend .checking
+        background: #f7fbf7
+        p
+            color: #1fc21a
+    .purchase_info
+        @include margin_b(.2rem)
+        .purchase_info_title
+            font-size: .3rem
+            color: $fontColor
+            font-weight: 700
+            height: .8rem
+            line-height: .8rem
+            @include border_b(1px,$borderColor)
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            i
+                font-weight: normal
+                float: right
+                color: #999
+        .purchase_info_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            .standard
+                height: .6rem
+                line-height: .6rem
+                font-size: .3rem
+                color: #666
+                i
+                    color: #999
+            .stand_list
+                border-top: 1px solid $borderColor
+                border-right: 1px solid $borderColor
+                border-left: 1px solid $borderColor
+                li
+                    @include border_b(1px,$borderColor)
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    color: $fontColor
+                    &:nth-child(2n)
+                        background: #fdf9ee
+                    p
+                        width: 4.7rem
+                        @include padding_l(.3rem)
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        float: left
+                        text-align: left
+                    p:first-child
+                        width: 2.14rem
+                        border-right: 1px solid $borderColor
+                        color: #666
+                        text-align: center
+                        @include padding_l(0)
+            .buy_amount
+                height: .9rem
+                line-height: .9rem
+                font-size: .3rem
+                color: $fontColor
+                border-bottom: 1px dotted #ccc
+                overflow: hidden
+                .left
+                    float: left
+                    width: 1.75rem
+                    color: #666
+                    i
+                        color: #999
+                    span
+                        color: $fontColor
+                        @include margin_l(.2)
+            .buy_address
+                @extend .buy_amount
+            .buy_time
+                @extend .buy_amount
+            .buy_remark
+                @extend .buy_amount
+                height: auto
+                @include border_b(0,#ccc)
+                @include padding_b(.2rem)
+                .right
+                    float: right
+                    line-height: .4rem
+                    width: 5rem
+                    @include padding_t(.2rem)
+                    p
+                        color: $orangeColor
+    .buyer_info
+        @extend .purchase_info
+        .buyer_info_title
+            @extend  .purchase_info_title
+        .buyer_info_box
+            @include padding_a(.3rem,.3rem,.4rem,1.5rem)
+            position: relative
+            .logo
+                width: 1rem
+                height: 1rem
+                @include border_radius(50%)
+                position: absolute
+                left: .3rem
+                top: .3rem
+                border: 1px solid $borderColor
+            .name
+                font-size: .3rem
+                color: $fontColor
+                @include margin_b(.15rem)
+            .phone,.qq,.wei
+                display: inline-block
+                @include margin_r(.2rem)
+                width: 1.2rem
+                height: .5rem
+                text-align: center
+                line-height: .48rem
+                font-size: .24rem
+                position: relative
+                @include border_radius(.4rem)
+                @include padding_l(.3rem)
+                &.phone
+                    color: $orangeColor
+                    border: 1px solid #ffe3e1
+                &.qq
+                    color: $blueColor
+                    border: 1px solid #d4effc
+                &.wei
+                    color: #00bb0c
+                    border: 1px solid #e0f6cf
+                i
+                    position: absolute
+                    left: .1rem
+    .my_offer
+        @extend .purchase_info
+        .my_offer_title
+            @extend .purchase_info_title
+        .my_offer_box
+            .my_offer_box_is
+                @include padding(.3rem)
+                @include padding_l(1.4rem)
+                position: relative
+                .pic
+                    width: 1rem
+                    height: 1rem
+                    position: absolute
+                    left: .3rem
+                    top: .3rem
+                .price
+                    width: 4.4rem
+                    height: .34rem
+                    text-overflow: ellipsis
+                    overflow: hidden
+                    white-space: nowrap
+                    font-size: .24rem
+                    color: #666
+                    span
+                        color: $redColor
+                .area
+                    @extend .price
+                .remark
+                    @extend .price
+                .is_get
+                    width: 1.26rem
+                    height: 1.26rem
+                    position: absolute
+                    right: .6rem
+                    top: .16rem
+                    img
+                        width: 100%
+                        height: 100%
+            .no_offer
+                font-size: .24rem
+                color: #999
+                height: .8rem
+                line-height: .8rem
+                @include padding_l(.3rem)
+    .over_offer
+        @extend .my_offer
+        .over_offer_title
+            @extend .my_offer_title
+            span
+                color: $redColor
+        .over_offer_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            .list
+                @extend .my_offer_box
+                @include border_b(1px,$borderColor)
+                .company_name
+                    height: .7rem
+                    line-height: .7rem
+                    font-size: .3rem
+                    color: $fontColor
+                    p
+                        height: .7rem
+                        max-width: 5.2rem
+                        text-overflow: ellipsis
+                        overflow: hidden
+                        white-space: nowrap
+                        display: inline-block
+                        float: left
+                    .level
+                        display: inline-block
+                        position: relative
+                        top: .1rem
+                        &.level_1
+                            img
+                                height: .24rem
+                                @include margin_t(.04rem)
+                        &.level_2
+                            img
+                                height: .25rem
+                                @include margin_t(.04rem)
+                        &.level_3
+                            img
+                                height: .23rem
+
+                .company_content
+                    height: .5rem
+                    line-height: .5rem
+                    font-size: .24rem
+                    .person
+                        color: #666
+                        display: inline-block
+                        width: 2.3rem
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        float: left
+                    .phone
+                        display: inline-block
+                        @include margin_r(.2rem)
+                        width: 1.2rem
+                        height: .5rem
+                        text-align: center
+                        line-height: .48rem
+                        font-size: .24rem
+                        position: relative
+                        @include border_radius(.4rem)
+                        @include padding_l(.3rem)
+                        color: $orangeColor
+                        border: 1px solid #ffe3e1
+                        i
+                            position: absolute
+                            left: .1rem
+                    .qq
+                        @extend .phone
+                        color: $blueColor
+                        border: 1px solid #d4effc
+                    .wei
+                        @extend .phone
+                        color: #00bb0c
+                        border: 1px solid #e0f6cf
+                .offer_company_box
+                    .no_offer
+                        @include padding_l(0)
+                    .offer_company_box_is
+                        @extend .my_offer_box_is
+                        .pic
+                            left: 0
+                        .is_get
+                            right: .3rem
+    .wait_offer
+        @include margin_b(.2rem)
+        .wait_offer_title
+            font-size: .3rem
+            color: #333
+            font-weight: 700
+            height: .8rem
+            line-height: .8rem
+            border-bottom: 1px solid #f5f5f5
+            padding-left: 0.3rem
+            padding-right: 0.3rem
+            span
+                color: $redColor
+            i
+                font-weight: normal
+                float: right
+                color: #999
+        .wait_offer_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            .wait_offer_info
+                height: .8rem
+                line-height: .8rem
+                font-size: .24rem
+                color: #999
+                text-align: center
+                @include border_b(1px,$borderColor)
+            .list
+                @include border_b(1px,$borderColor)
+                @include padding_b(.2rem)
+                .company_name
+                    height: .7rem
+                    line-height: .7rem
+                    font-size: .3rem
+                    color: $fontColor
+                    p
+                        height: .7rem
+                        max-width: 5.2rem
+                        text-overflow: ellipsis
+                        overflow: hidden
+                        white-space: nowrap
+                        display: inline-block
+                        float: left
+                    .level
+                        display: inline-block
+                        position: relative
+                        @include margin_l(.2rem)
+                        &.level_1
+                            img
+                                height: .24rem
+                                @include margin_t(.04rem)
+                        &.level_2
+                            img
+                                height: .25rem
+                                @include margin_t(.04rem)
+                        &.level_3
+                            img
+                                height: .23rem
+
+                .company_content
+                    height: .5rem
+                    line-height: .5rem
+                    font-size: .24rem
+                    .person
+                        color: #666
+                        display: inline-block
+                        width: 2.3rem
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        float: left
+                    .phone
+                        display: inline-block
+                        @include margin_r(.2rem)
+                        width: 1.2rem
+                        height: .5rem
+                        text-align: center
+                        line-height: .48rem
+                        font-size: .24rem
+                        position: relative
+                        @include border_radius(.4rem)
+                        @include padding_l(.3rem)
+                        color: $orangeColor
+                        border: 1px solid #ffe3e1
+                        i
+                            position: absolute
+                            left: .1rem
+                    .qq
+                        @extend .phone
+                        color: $blueColor
+                        border: 1px solid #d4effc
+                    .wei
+                        @extend .phone
+                        color: #00bb0c
+                        border: 1px solid #e0f6cf
+    .cancel_purchase
+        width: 100%
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        color: $blueColor
+        font-size: .3rem
+        @include box-shadow(0,0,5px,#eee)
+        position: fixed
+        bottom: 0
+        left: 0
+        z-index: 9
+    .purchase_now
+        width: 100%
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        color: $whiteColor
+        font-size: .3rem
+        position: fixed
+        bottom: 0
+        left: 0
+        z-index: 9
+        background: $blueColor
+        i
+            position: relative
+            left: .2rem
+            font-size: .32rem
+    .can_purchase
+        @extend .purchase_now
+        .ignore
+            width: 50%
+            float: left
+            background: $whiteColor
+            color: $blueColor
+            height: 100%
+        .can_purchase_btn
+            width: 50%
+            float: left
+            height: 100%
+
+@keyframes showbox
+    from
+        opacity: 0
+    to
+        opacity: 1

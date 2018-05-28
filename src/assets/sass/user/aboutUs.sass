@@ -1,0 +1,43 @@
+@import '../common.sass'
+
+.about_us
+    @include padding_t(.9rem)
+    position: relative
+    .top_bg
+        height: 4rem
+        img
+            width: 7.5rem
+            height: 4rem
+    .company_info
+        width: 6.9rem
+        background: rgba(255,255,255,.9)
+        position: absolute
+        left: .3rem
+        top: 2.9rem
+        @include padding_b(.4rem)
+        @include padding_t(.4rem)
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        @include border_radius(.1rem)
+        .title
+            width: 2rem
+            height: .6rem
+            line-height: .6rem
+            text-align: center
+            background: $blueColor
+            font-size: .28rem
+            color: $whiteColor
+            margin: 0 auto
+            @include border_radius(.3rem)
+            @include margin_b(.35rem)
+        p
+            font-size: .28rem
+            color: $fontColor
+            text-indent: .6rem
+            &.margin_b_80
+                @include margin_b(.8rem)
+        strong
+            font-weight: normal
+            display: block
+            font-size: .28rem
+            color: $fontColor

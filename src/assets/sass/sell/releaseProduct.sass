@@ -1,0 +1,447 @@
+@import '../common.sass'
+
+
+.tab_select_border
+    border-bottom: 2px solid #09e !important
+    color: #09e
+.recommend_no
+    color: #ccc !important
+
+.white_color
+    color: #fff !important
+.blue_color
+    color: #09e !important
+    
+.release_product
+    overflow: hidden
+    .release_product_title
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        @include margin_t(.9rem)
+        height: .8rem
+        line-height: .8rem
+        width: 100%
+        background: #e5f5fd
+        .release_title_text
+            color: $blueColor
+            font-size: .3rem
+    .release_product_tab
+        height: .8rem
+        background: #fff
+        line-height: .8rem
+        .tab_header_box
+            height: .8rem
+            line-height: .8rem
+            font-size: .3rem
+            .tab_header_select
+                width: 50%
+                text-align: center
+                line-height: .76rem
+                @include border_b(2px,#fff)
+    .release_product_content
+        @include margin_t(.2rem)
+        overflow: hidden
+        .release_img_content
+            background: #fff
+            .img_content_wenlu
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                height: 2.3rem
+                @include margin_b(.1rem)
+                @include border_b(1px,$borderColor)
+                .img_wenlu_title
+                    color: $fontColor
+                    height: .6rem
+                    line-height: .6rem
+                    font-size: .3rem
+                    em
+                        display: inline-block
+                        color: $redColor
+                        font-size: .3rem
+                        font-style: normal
+                        line-height: .6rem
+                        @include margin_r(.1rem)
+                    .img_title_hint
+                        display: inline-block
+                        line-height: .6rem
+                        height: .6rem
+                        font-size: .24rem
+                        color: #ccc
+                        @include margin_l(.2rem)
+                .img_upfile_box
+                    @include margin_t(.1rem)
+                    width: 100%
+                    height: 1.5rem
+                    position: relative
+                    .img_upfile_bg
+                        position: absolute
+                        background: $borderColor
+                        width: 1.4rem
+                        height: 1.4rem
+                        text-align: center
+                        line-height: 1.4rem
+                        border: 1px dashed #ddd
+                        left: .26rem
+                        z-index: 998
+                        .add_icon
+                            color: #ddd
+                    .up_file_img
+                        position: absolute
+                        width: 1.4rem
+                        height: 1.4rem
+                        left: .26rem
+                        z-index: 999
+                        opacity: 0
+                .img_wen_ok
+                    width: 1.4rem
+                    height: 1.4rem
+                    @include margin_t(.1rem)
+                    @include margin_r(.26rem)
+                    position: relative
+                    .wenlu_img_box
+                        width: 1.4rem
+                        height: 1.4rem
+                    .detail_img
+                        position: absolute
+                        width: .32rem
+                        height: .32rem
+                        line-height: .32rem
+                        text-align: center
+                        color: #ffffff
+                        background: $blueColor
+                        border-radius: 100%
+                        top: 0
+                        right: 0
+                        z-index: 98
+            .img_content_qita
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                @include padding_b(.2rem)
+                @include border_b(1px,$borderColor)
+                margin: 0
+                width: 7.5rem
+                overflow: hidden
+                max-height: 4rem
+                .img_qita_title
+                    color: $fontColor
+                    height: .6rem
+                    line-height: .6rem
+                    font-size: .3rem
+                    em
+                        display: inline-block
+                        color: #fff
+                        font-style: normal
+                        font-size: .3rem
+                        line-height: .6rem
+                        @include margin_r(.1rem)
+                    .img_title_hint
+                        display: inline-block
+                        line-height: .6rem
+                        height: .6rem
+                        font-size: .24rem
+                        color: #ccc
+                        @include margin_l(.2rem)
+                .img_upfile_box
+                    @include margin_t(.1rem)
+                    width: 1.4rem
+                    height: 1.5rem
+                    position: relative
+                    .img_upfile_bg
+                        position: absolute
+                        background: $borderColor
+                        width: 1.4rem
+                        height: 1.4rem
+                        text-align: center
+                        line-height: 1.4rem
+                        border: 1px dashed #ddd
+                        left: .26rem
+                        z-index: 998
+                        .add_icon
+                            color: #ddd
+                    .up_file_img
+                        position: absolute
+                        width: 1.4rem
+                        height: 1.4rem
+                        left: .26rem
+                        z-index: 999
+                        opacity: 0
+                .img_wen_ok
+                    width: 1.4rem
+                    height: 1.4rem
+                    @include margin_t(.1rem)
+                    @include margin_r(.26rem)
+                    position: relative
+                    .wenlu_img_box
+                        width: 1.4rem
+                        height: 1.4rem
+                    .detail_img
+                        position: absolute
+                        width: .32rem
+                        height: .32rem
+                        line-height: .32rem
+                        text-align: center
+                        color: #ffffff
+                        background: $blueColor
+                        border-radius: 100%
+                        top: 0
+                        right: 0
+                        z-index: 98
+    .release_select_content
+        @include margin_t(.2rem)
+        overflow: hidden
+        .select_content_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem) 
+            width: 100%
+            overflow: hidden
+            background: #ffffff
+            .select_content_text
+                line-height: 1rem
+                height: 1rem
+                font-size: .3rem
+                @include border_b(1px,$borderColor)
+                em
+                    color: $redColor
+                    font-style: normal
+                    display: inline-block
+                    font-size: .3rem
+                    line-height: 1rem
+                    @include margin_r(.1rem)
+                .conent_text_box
+                    width: 1.2rem
+                .select_input_text
+                    @include padding_l(.2rem)
+                    border: none
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                .unit_text
+                    width: 4.2rem
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    text-align: right
+                .arrow_right
+                    width: .8rem
+                    line-height: 1rem
+                    height: 1rem
+                    text-align: right
+                    color: #999999
+    .release_price_content
+        @include margin_t(.2rem)
+        overflow: hidden
+        .price_content_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem) 
+            width: 100%
+            overflow: hidden
+            background: #ffffff
+            .price_content_text
+                line-height: 1rem
+                height: 1rem
+                font-size: .3rem
+                @include border_b(1px,$borderColor)
+                input
+                    border: none
+                .prime_cost 
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.6rem)
+                .min_prime_cost 
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.6rem)
+                .max_prime_cost 
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                .promotion_price
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.3rem)
+                .min_promotion_price
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.3rem)
+                .max_promotion_price
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    width: 2rem
+                    @include padding_l(.2rem)
+                .number_input
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.6rem)
+                em
+                    color: $redColor
+                    font-style: normal
+                    display: inline-block
+                    font-size: .3rem
+                    line-height: 1rem
+                    @include margin_r(.1rem)
+                .price_unit
+                    @include margin_r(.2rem)
+                .arrow_right
+                    width: .8rem
+                    line-height: 1rem
+                    height: 1rem
+                    text-align: right
+                    color: #999999
+    .release_set_content
+        @include margin_t(.2rem)
+        overflow: hidden
+        .set_content_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem) 
+            width: 100%
+            overflow: hidden
+            background: #ffffff
+            .set_content_text
+                line-height: 1rem
+                height: 1rem
+                font-size: .3rem
+                @include border_b(1px,$borderColor)
+                input
+                    border: none
+                .goods_title 
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    @include padding_l(.2rem)
+                .article_number
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    @include padding_l(.2rem)
+                em
+                    color: $redColor
+                    font-style: normal
+                    display: inline-block
+                    font-size: .3rem
+                    line-height: 1rem
+                    @include margin_r(.1rem)
+                .price_unit
+                    @include margin_r(.2rem)
+                .arrow_right
+                    width: .8rem
+                    line-height: 1rem
+                    height: 1rem
+                    text-align: right
+                    color: #999999
+    .release_footer_content
+        @include margin_t(.2rem)
+        overflow: hidden
+        .footer_content_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem) 
+            width: 100%
+            overflow: hidden
+            background: #ffffff
+            .footer_content_text
+                line-height: 1rem
+                height: 1rem
+                font-size: .3rem
+                @include border_b(1px,$borderColor)
+                .recommen_box
+                    @include margin_t(.17rem)
+                .yes_text
+                    @include margin_l(.1rem)
+                .no_text
+                    @include margin_r(.1rem)
+                em
+                    color: $redColor
+                    font-style: normal
+                    display: inline-block
+                    font-size: .3rem
+                    line-height: 1rem
+                    @include margin_r(.1rem)
+                .price_unit
+                    @include margin_r(.2rem)
+                .arrow_right
+                    width: .8rem
+                    line-height: 1rem
+                    height: 1rem
+                    text-align: right
+                    color: #999999
+                .img_code_input
+                    width: 2.5rem
+                    border: none
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .3rem
+                    @include padding_l(.2rem)
+                    @include margin_l(.3rem)
+                .img_code
+                    width: 2.2rem
+                    height: .6rem
+                    @include margin_t(.2rem)
+    .submit_btn
+        width: 6.98rem
+        border: none
+        @include margin_t(.3rem)
+        @include margin_b(.3rem)
+        @include margin_l(.3rem)
+        @include margin_r(.3rem) 
+        @include border_radius(.08rem) 
+        height: .98rem
+        line-height: .98rem
+        text-align: center
+        font-size: .3rem
+        color: $whiteColor
+        background: $blueColor
+.select_box
+    width: 7.5rem
+    height: 100vh
+    background: #f5f5f5
+    .select_box_header
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        background: #ffffff
+        height: .9rem
+        line-height: .9rem
+        text-align: center
+        font-size: .3rem
+        font-weight: bold
+        .go_back_icon
+            font-size: .3rem
+            text-align: left
+            font-weight: normal
+    .select_box_content
+        @include margin_t(.2rem)
+        background: #ffffff
+        overflow: scroll
+        height: calc(100vh - .9rem - .2rem)
+        .select_content_list
+            width: 100%
+            overflow: hidden
+            margin-bottom: 1.5rem
+            .content_list_box
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                line-height: 1rem
+                font-size: .3rem
+                height: 1rem
+                @include border_b(1px,$borderColor)
+                .not_selected
+                    color: #dddddd
+                    font-size: .36rem
+                .pitch_on
+                    color: $blueColor
+                    font-size: .38rem

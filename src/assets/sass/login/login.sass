@@ -1,0 +1,269 @@
+@import '../common.sass'
+
+.content
+    min-height: 100vh
+    background: #f5f5f5
+
+// 登录模块
+.login
+    background: $whiteColor
+    min-height: 100vh
+    @include padding_l(.3rem)
+    @include padding_r(.3rem)
+    overflow: hidden
+    .login_close
+        text-align: left
+        height: .6rem
+        line-height: .6rem
+        @include margin_b(1.5rem)
+        i
+            font-size: .4rem
+            color: #333
+    .login_logo
+        height: .75rem
+        display: block
+        margin: 0 auto
+        @include margin_b(.9rem)
+    .user_name
+        height: .8rem
+        line-height: .8rem
+        @include padding_l(.6rem)
+        position: relative
+        @include border_b(1px,$borderColor)
+        @include margin_b(.2rem)
+        .icon
+            font-size: .34rem
+            color: #999
+            position: absolute
+            left: 0
+            top: 0
+        input
+            font-size: .3rem
+            width: 100%
+            border: none
+    .login_password
+        @extend .user_name
+        @include margin_b(.5rem)
+        input
+            @include padding_r(.3rem)
+        .show
+            font-size: .34rem
+            color: $blueColor
+            position: absolute
+            right: 0
+            top: 0
+    .login_btn
+        width: 100%
+        display: block
+        margin: 0 auto
+        background: $blueColor
+        text-align: center
+        height: 1rem
+        line-height: 1rem
+        border: none
+        @include border_radius(3px)
+        font-size: .32rem
+        color: $whiteColor
+        @include margin_b(.8rem)
+    .or
+        width: 3.5rem
+        margin: 0 auto
+        text-align: center
+        font-size: .24rem
+        color: #ccc
+        position: relative
+        @include margin_b(.35rem)
+        &:before
+            content: ""
+            width: 1.45rem
+            height: 1px
+            background: #f2f2f2
+            position: absolute
+            left: 0
+            top: .16rem
+        &:after
+            content: ""
+            width: 1.45rem
+            height: 1px
+            background: #f2f2f2
+            position: absolute
+            right: 0
+            top: .16rem
+    .we_login
+        text-align: center
+        font-size: .24rem
+        color: $fontColor
+        @include margin_b(.6rem)
+        i
+            font-size: 1rem
+            display: block
+            color: #59bb34
+    .go_another
+        text-align: center
+        font-size: .28rem
+        color: #ccc
+        span
+            color: $blueColor
+            @include margin_a(0,.1rem,0,.1rem)
+
+// 注册模块
+.register
+    background: #f5f5f5
+    @include padding_t(1.1rem)
+    .col_1
+        height: 1rem
+        line-height: 1rem
+        background: $whiteColor
+        @include padding_l(.3rem)
+        @include border_b(1px,$borderColor)
+        .left_col
+            float: left
+            width: 1.4rem
+            text-align: left
+            font-size: .3rem
+            color: #4c4c4c
+        .right_col
+            width: 80%
+            float: left
+            font-size: .3rem
+            color: $fontColor
+            input.long
+                display: block
+                width: 100%
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                border: none
+                font-size: .3rem
+            input.small
+                display: block
+                float: left
+                width: 3.5rem
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                border: none
+                font-size: .3rem
+            .img_code
+                width: 2rem
+                height: .8rem
+                @include margin_t(.1rem)
+                display: block
+                float: left
+                position: relative
+                @include padding_l(.2rem)
+                &:before
+                    content: ''
+                    width: .02rem
+                    height: .4rem
+                    background: #ccc
+                    position: absolute
+                    left: 0
+                    top: .2rem
+                img
+                    height: .8rem
+            .msg_code
+                width: 2rem
+                background: $whiteColor
+                border: none
+                float: left
+                display: block
+                height: .8rem
+                line-height: .8rem
+                @include margin_t(.1rem)
+                font-size: .24rem
+                color: $fontColor
+                position: relative
+                @include padding_l(.2rem)
+                &:before
+                    content: ''
+                    width: .02rem
+                    height: .4rem
+                    background: #ccc
+                    position: absolute
+                    left: 0
+                    top: .2rem
+            .again
+                width: 2rem
+                background: $whiteColor
+                border: none
+                float: left
+                display: block
+                height: .8rem
+                line-height: .8rem
+                @include margin_t(.1rem)
+                font-size: .24rem
+                color: $fontColor
+                position: relative
+                @include padding_l(.2rem)
+                &:before
+                    content: ''
+                    width: .02rem
+                    height: .4rem
+                    background: #ccc
+                    position: absolute
+                    left: 0
+                    top: .2rem
+                em
+                    font-style: normal
+                    color: $orangeColor
+
+    .agreement
+        font-size: .24rem
+        color: #999
+        height: .6rem
+        line-height: .6rem
+        @include padding_l(.3rem)
+        @include margin_b(.4rem)
+        @include margin_t(.3rem)
+        i
+            color: $blueColor
+    .agree_register
+        margin: 0 auto .3rem
+        width: 92%
+        display: block
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        font-size: .3rem
+        color: $whiteColor
+        background: $blueColor
+        border: none
+        @include border_radius(.03rem)
+    .go_login
+        text-align: right
+        font-size: .24rem
+        color: #999
+        @include padding_r(.3rem)
+        span
+            color: $blueColor
+
+
+// 绑定账号
+.bind_account
+    @extend .register
+    .submit
+        display: block
+        width: 92%
+        margin: .3rem auto 0
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        font-size: .3rem
+        color: $whiteColor
+        border: none
+        background: $blueColor
+        @include border_radius(.03rem)
+
+// 找回密码
+.find_password
+    @extend .bind_account
+    .phone_info
+        height: 1rem
+        line-height: 1rem
+        text-align: left
+        font-size: .24rem
+        color: $fontColor
+        @include padding_l(.3rem)
+        span
+            color: $orangeColor

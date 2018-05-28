@@ -1,0 +1,123 @@
+@import '../common.sass'
+
+.detail_color_content
+    position: fixed
+    bottom: 0
+    width: 7.5rem
+    height: 100vh
+    z-index: 9999
+    background: rgba(0,0,0,.8)
+    .detail_color_box
+        position: absolute
+        bottom: 0
+        width: 7.5rem
+        overflow: hidden
+        background: #ffffff
+        .detail_color_top
+            height: .8rem
+            line-height: .8rem
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            font-size: .3rem
+            .clear_icon
+                font-size: .24rem
+                display: inline-block
+                width: .5rem
+                color: #666666
+                text-align: right
+    .detail_color_title
+        width: 7.5rem
+        height: .8rem
+        line-height: .8rem
+        color: #666666
+        @include border_t(.01rem,#e5e5e5)
+        .color_title_box
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            @include border_t(.01rem,$borderColor)
+            height: .8rem
+            font-size: .24rem
+            .color_title_number
+                width: 2.5rem
+            .color_title_dyestuff
+                width: 1.35rem
+            .color_title_attr
+                width: 1.35rem
+            .color_title_downcolor
+                width: 1.35rem
+    .detail_color_number
+        width: 7.5rem
+        height: 8rem
+        font-size: .24rem
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        overflow: scroll
+        .color_number_box
+            width: 100%
+            .color_number_info
+                width: 100%
+                height: 1rem
+                line-height: 1rem
+                .color_info_box
+                    width: 100%
+                    height: 1rem
+                    @include border_b(.01rem,$borderColor)
+                    .color_info_img
+                        width: .6rem
+                        @include margin_r(.2rem)
+                        .color_img_box
+                            width: .6rem
+                            height: .6rem
+                            @include margin_t(.2rem)
+                        .null_img
+                            display: block
+                            width: .6rem
+                            height: .6rem
+                    .color_sell_price
+                        width: 1.70rem
+                        height: 1rem
+                        .color_stor_text
+                            @include margin_t(.2rem)
+                            width: 1.5rem
+                            line-height: .3rem
+                            overflow: hidden
+                            white-space: nowrap
+                        .color_stor_price
+                            width: 1.5rem
+                            color: $redColor
+                            line-height: .3rem
+                    .color_sell_price_null
+                        width: 1.70rem
+                        height: 1rem
+                        .color_stor_price_null
+                            width: 1.5rem
+                            height: 1rem
+                            line-height: 1rem
+                            color: $redColor
+                    .color_info_dyestuff
+                        width: 1.35rem
+                    .color_info_attr
+                        width: 1.35rem
+                    .color_info_downcolor
+                        width: 1.35rem
+.mint-indicator
+    .mint-indicator-wrapper
+        z-index: 9999 !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,191 @@
+@import '../common.sass'
+
+.set_store
+    background: $borderColor
+    min-height: 100vh
+    @include padding_b(1.6rem)
+    @include padding_t(.9rem)
+    h3
+        height: .6rem
+        line-height: .6rem
+        text-align: center
+        font-size: .24rem
+        color: #666
+        font-weight: normal
+    .col_1
+        background: $whiteColor
+        height: 1rem
+        line-height: 1rem
+        @include padding_a(0,.3rem,0,.3rem)
+        @include border_b(1px,$borderColor)
+        .left_col
+            width: 1.8rem
+            float: left
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        .right_col
+            float: left
+            width: 5rem
+            font-size: .24rem
+            color: $fontColor
+            position: relative
+            input
+                display: block
+                width: 100%
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                border: none
+                font-size: .24rem
+                color: $fontColor
+            .go_choose
+                position: absolute
+                right: 0
+                top: 0
+                color: #999
+    .store_icon
+        background: $whiteColor
+        @include border_b(1px,$borderColor)
+        @include padding_l(.3rem)
+        @include padding_b(.4rem)
+        p
+            height: .7rem
+            line-height: .7rem
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        .over_upload
+            position: relative
+            width: 1.4rem
+            img
+                display: block
+                width: 1.4rem
+                height: 1.4rem
+            .delete
+                position: absolute
+                right: 0
+                top: 0
+                color: $blueColor
+                display: block
+                width: .38rem
+                height: .38rem
+                z-index: 3
+                img
+                    height: 100%
+                    width: 100%
+    .store_ind
+        background: $whiteColor
+        @include border_b(1px,$borderColor)
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        @include padding_b(.4rem)
+        p
+            height: .7rem
+            line-height: .7rem
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        textarea
+            resize: none
+            width: 100%
+            height: 1rem
+            border: none
+            @include padding_l(.14rem)
+    .tab_list
+        background: $whiteColor
+        @include padding_a(.3rem,.3rem,0,.3rem)
+        ul
+            @include border_b(1px,$borderColor)
+            li
+                display: block
+                float: left
+                @include border_radius(.03rem)
+                @include padding_a(.04rem,.2rem,.04rem,.2rem)
+                position: relative
+                @include margin_r(.25rem)
+                @include margin_b(.25rem)
+                font-size: .24rem
+                color: $blueColor
+                background: #e5f5fd
+
+        .add_more
+            height: .8rem
+            line-height: .8rem
+            font-size: .24rem
+            color: $blueColor
+            text-align: center
+            i
+                position: relative
+                top: .02rem
+        .save_btn
+            display: block
+            width: 6.9rem
+            height: 1rem
+            line-height: 1rem
+            text-align: center
+            background: $blueColor
+            font-size: .3rem
+            color: $whiteColor
+            border: none
+            @include border_radius(.03rem)
+            position: fixed
+            bottom: .3rem
+            left: .3rem
+            z-index: 99
+
+
+//标签选择
+.store_tab
+    @include padding_b(1.4rem)
+    @include padding_t(.9rem)
+    .tab_title
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        height: .8rem
+        line-height: .8rem
+        font-size: .3rem
+        color: $fontColor
+        i
+            font-style: normal
+            color: $blueColor
+            font-size: .24rem
+            float: right
+    .tab_list
+        background: $whiteColor
+        height: 2.6rem
+        overflow: hidden
+        @include padding_a(.2rem,.3rem,0,.3rem)
+        &.auto
+            height: auto
+        li
+            display: block
+            float: left
+            height: .6rem
+            line-height: .58rem
+            font-size: .28rem
+            color: $fontColor
+            @include padding_l(.2rem)
+            @include padding_r(.2rem)
+            border: 1px solid #ddd
+            @include border_radius(.04rem)
+            @include margin_r(.2rem)
+            @include margin_b(.2rem)
+            &.on
+                background: #e5f5fd
+                color: $blueColor
+                border: 1px solid #e5f5fd
+    .is_choose
+        width: 100%
+        height: 1rem
+        line-height: 1rem
+        background: $blueColor
+        color: $whiteColor
+        font-size: .3rem
+        border: none
+        position: fixed
+        bottom: 0
+        left: 0

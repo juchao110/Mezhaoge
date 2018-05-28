@@ -1,0 +1,233 @@
+@import './common.sass'
+
+.mint-swipe-indicators
+    .mint-swipe-indicator
+        background: $whiteColor
+        opacity: 1
+    .is-active
+        background: $blueColor!important
+
+.home_body
+    .search_head
+        background: none
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 10
+        &.scroll
+            background: $blueColor
+            @include animation(showb,1s)
+    .go_purchase
+        color: $whiteColor
+    .banner
+        height: 4.2rem
+        .mint-swipe-item
+            img
+                height: 4.2rem
+                width: 100%
+    .banner_circle
+        position: relative
+        .circle_bg
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: 2
+            img
+                width: 7.5rem
+                height: .42rem
+                z-index: 1
+    .home_content
+        @include padding_b(1.6rem)
+        &>*
+            background: $whiteColor
+        .top_info
+            height: .8rem
+            overflow: hidden
+            position: relative
+            @include border_b(1px,$borderColor)
+            @include padding_l(1.4rem)
+            img
+                height: .53rem
+                position: absolute
+                left: .3rem
+                top: .15rem
+            .info_list
+                position: relative
+                transition: top 0.5s
+                li
+                    height: .8rem
+                    line-height: .8rem
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    font-size: .24rem
+                    color: $fontColor
+        .top_quick
+            height: 2rem
+            // @include margin_b(.2rem)
+            @include padding_t(.3rem)
+            .item
+                width: 25%
+                float: left
+                text-align: center
+                img
+                    height: 1rem
+                    display: block
+                    margin: 0 auto .2rem
+        .hot_part
+            .hot_title
+                height: .8rem
+                @include padding_t(.13rem)
+                @include border_b(1px,$borderColor)
+                img
+                    height: .54rem
+                    display: block
+                    margin: 0 auto 0
+            .hot_list
+                @include border_b(1px,$borderColor)
+                li
+                    display: block
+                    float: left
+                    width: 2.5rem
+                    height: 2.5rem
+                    position: relative
+                    &.cate_1
+                        width: 5rem
+                        background: url(../images/index/index_06.jpg) no-repeat center
+                        background-size: cover
+                        @include padding_l(.3rem)
+                        @include padding_t(.3rem)
+                        h5
+                            font-size: .3rem
+                            z-index: 2
+                            color: $whiteColor
+                        h6
+                            font-weight: normal
+                            font-size: .24rem
+                            z-index: 2
+                            color: $whiteColor
+                    &.cate_2
+                        @include padding_t(.2rem)
+                        .cate_name
+                            @include padding_l(.3rem)
+                            font-size: .3rem
+                            color: $fontColor
+                        .cate_info
+                            @include padding_l(.3rem)
+                            font-size: .24rem
+                            color: #999
+                        img
+                            display: block
+                            height: 1.1rem
+                            margin: .2rem auto 0
+                    &.cate_3
+                        @extend .cate_2
+                        background: $borderColor
+                        img
+                            display: block
+                            height: 1.01rem
+                            margin: .2rem auto 0
+                    &.cate_4
+                        @extend .cate_2
+                        img
+                            display: block
+                            margin: 0 auto
+                            height: 1.4rem
+                    &.cate_5
+                        @extend .cate_2
+                        background: $borderColor
+                        img
+                            display: block
+                            margin: .2rem auto 0
+                            height: 1.06rem
+        .home_purchase
+            @include margin_b(.3rem)
+            .home_purchase_title
+                height: .8rem
+                @include padding_t(.13rem)
+                @include border_b(1px,$borderColor)
+                img
+                    height: .54rem
+                    margin: 0 auto
+            .border_btm
+                @include border_b(1px,$borderColor)
+            .more_purchase
+                height: .8rem
+                line-height: .8rem
+                text-align: center
+                color: $blueColor
+                font-size: .3rem
+                i
+                    font-size: .2rem
+                    color: #999
+        .good_sale
+            background: url(../images/index/index_17.jpg) no-repeat center
+            background-size: cover
+            height: 7.8rem
+            @include padding_t(2rem)
+            @include margin_b(.2rem)
+            .good_sale_title
+                // height: 1.2rem
+                // @include padding_t(.2rem)
+                img
+                    display: block
+                    height: 2.11rem
+                    margin:  0 auto
+            .good_sale_list
+                @include padding_a(0,.3rem,0,.3rem)
+                .good_sale_list_banner
+                    height: 5.6rem
+                .good_sale_item
+                    height: 4.8rem
+                    width: 3.35rem
+                    background: $whiteColor
+                    @include padding(.2rem)
+                    position: relative
+                    float: left
+                    @include margin_r(.2rem)
+                    &:last-child
+                        @include margin_r(0)
+                    .tip
+                        position: absolute
+                        right: .15rem
+                        top: .12rem
+                        .tip_img
+                            height: .75rem
+                    .main_img
+                        max-width: 100%
+                        height: 3rem
+                        display: block
+                        margin: 0 auto .15rem
+                    .title
+                        font-size: .24rem
+                        color: $fontColor
+                        height: .68rem
+                        line-height: .35rem
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        display: -webkit-box
+                        -webkit-box-orient: vertical
+                        -webkit-line-clamp: 2
+                    .price
+                        color: #ef0954
+                        font-size: .24rem
+                        .big_font
+                            font-size: .36rem
+                            font-weight: 700
+                        .sku
+                            color: #999
+                    .old_price
+                        font-size: .24rem
+                        color: #999
+                        text-decoration: line-through
+        .copyright
+            background: $borderColor
+            font-size: .24rem
+            color: #ccc
+            p
+                text-align: center
+@keyframes showb
+    from
+        opacity: 0
+    to
+        opacity: 1

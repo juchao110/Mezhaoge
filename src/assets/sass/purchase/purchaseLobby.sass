@@ -1,0 +1,58 @@
+@import '../common.sass'
+
+.purchase_lobby
+    @include padding_t(1.7rem)
+    min-height: 100vh
+    background: $borderColor
+    .search_type
+        height: .8rem
+        line-height: .8rem
+        border-top: 1px solid $borderColor
+        background: $whiteColor
+        @include border_b(1px,$borderColor)
+        position: fixed
+        top: .9rem
+        left: 0
+        z-index: 9
+        overflow: hidden
+        .start_time
+            width: 3.35rem
+            text-align: center
+            font-size: .28rem
+            color: $fontColor
+            border-right: 1px solid $borderColor
+            float: left
+            &.on
+                color: $blueColor
+        .over_time
+            @extend .start_time
+        .more_type
+            display: block
+            width: .8rem
+            text-align: center
+            float: left
+            &.is_filt
+                color: $orangeColor
+    .purchase_item_border
+        @include border_b(1px,$borderColor)
+    .no_more
+        text-align: center
+        font-size: .24rem
+        color: #ccc
+        line-height: .6rem
+    .black_bg
+        width: 100%
+        height: 100vh
+        background: rgba(0,0,0,.5)
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 99
+
+
+
+@keyframes show
+    from
+        left: 7.5rem
+    to
+        left: 0

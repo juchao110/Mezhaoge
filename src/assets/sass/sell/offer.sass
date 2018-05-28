@@ -1,0 +1,92 @@
+@import '../common.sass'
+
+
+.offer
+    background: $whiteColor
+    @include padding_l(.3rem)
+    @include padding_r(.3rem)
+    @include padding_t(.9rem)
+    @include margin_t(.2rem)
+    font-size: .3rem
+    color: #4c4c4c
+    .offer_img
+        background: $whiteColor
+        @include border_b(1px,$borderColor)
+        @include padding_b(.4rem)
+        p
+            height: .7rem
+            line-height: .7rem
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        .over_upload
+            position: relative
+            width: 1.4rem
+            img
+                display: block
+                width: 1.4rem
+                height: 1.4rem
+            .delete
+                position: absolute
+                right: 0
+                top: 0
+                color: $blueColor
+                display: block
+                width: .38rem
+                height: .38rem
+                line-height: .4rem
+                z-index: 3
+                img
+                    width: 100%
+                    height: 100%
+    .col_1
+        height: 1rem
+        line-height: 1rem
+        background: $whiteColor
+        @include border_b(1px,$borderColor)
+        position: relative
+        overflow: hidden
+        .title
+            font-size: .3rem
+            color: #4c4c4c
+            float: left
+            @include margin_r(.2rem)
+            span
+                color: $redColor
+        .value
+            float: right
+            @include margin_r(.5rem)
+            font-size: .24rem
+            color: $fontColor
+        i
+            position: absolute
+            right: 0
+            top: 0
+            color: #999
+        .input_div
+            float: left
+            input
+                border: none
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                font-size: .24rem
+                color: $fontColor
+    .remark
+        @include padding(.3rem)
+        @include padding_l(0)
+        @include padding_r(0)
+        @include border_b(1px,$borderColor)
+        background: $whiteColor
+        p
+            font-size: .3rem
+            color: #4c4c4c
+        textarea
+            resize: none
+            display: block
+            width: 100%
+            height: 1rem
+            font-size: .24rem
+            color: $fontColor
+            border: none

@@ -1,0 +1,162 @@
+@import '../common.sass'
+
+.mint-toast
+    z-index: 3000 !important
+.mint-indicator-wrapper
+    z-index: 3001 !important
+    
+.product_standard_box
+    @include padding_b(1rem)
+    width: 7.5rem
+    height: 100vh
+    overflow: scroll
+    background: #f5f5f5
+    .standard_header
+        @include padding_r(.3rem)
+        background: #ffffff
+        height: .9rem
+        width: 100%
+        line-height: .9rem
+        text-align: center
+        font-size: .3rem
+        font-weight: bold
+        position: fixed
+        top: 1px
+        left: 0px 
+        .go_back_icon
+            width: .8rem
+            font-size: .3rem
+            text-align: center
+    .standard_content
+        @include margin_t(1.1rem)
+        background: #ffffff
+        .standard_title_box
+            @include padding_r(.3rem)
+            @include padding_l(.3rem)
+            @include border_b(1px,$borderColor)
+            height: .8rem
+            line-height: .8rem
+            color: #666666
+            .title_box
+                line-height: .8rem
+                .title_text
+                    width: 2.3rem
+                    em
+                        font-style: normal
+                        color: $redColor
+                        font-weight: bold
+                        display: inline-block
+                        font-size: .3rem
+                        line-height: .8rem
+        .content_info_box
+            @include padding_r(.3rem)
+            @include padding_l(.3rem)
+            @include padding_b(.2rem)
+            @include border_b(1px,$borderColor)
+            background: #ffffff
+            .content_list_box
+                overflow: hidden
+                width: 100%
+                .list_number_box
+                    @include margin_t(.2rem)
+                    width: 2.3rem
+                    .number_line_box
+                        width: 2.3rem
+                        .line_info_box
+                            width: 2.3rem
+                            .number_text
+                                border: none
+                                width: 2.18rem
+                                height: .58rem
+                                padding: 0 .2rem
+                                border: 1px solid #dddddd
+                                border-radius: .05rem
+                                font-size: .24rem
+                                line-height: .58rem
+                .list_standard_box
+                    width: 2.3rem
+                    .standard_line_box
+                        width: 2.3rem
+                        .line_info_box
+                            padding: 0 .2rem
+                            @include margin_t(.2rem)
+                            border: 1px solid #dddddd
+                            width: 2.18rem
+                            height: .58rem
+                            border-radius: .05rem
+                            line-height: .58rem
+                            .color_text
+                                font-size: .24rem
+                            .arrow_icon
+                                color: #b3b3b3
+                                font-size: .3rem
+                .list_price_box
+                    width: 1.7rem
+                    .price_line_box
+                        width: 1.7rem
+                        .line_info_box
+                            @include margin_t(.2rem)
+                            .number_text
+                                border: none
+                                width: 1.5rem
+                                height: .58rem
+                                padding: 0 .2rem
+                                border: 1px solid #dddddd
+                                border-radius: .05rem
+                                font-size: .24rem
+                                line-height: .58rem
+                                text-align: center
+                .list_detail_box
+                    width: .4rem
+                    .detail_line_box
+                        width: .4rem
+                        .line_info_box
+                            @include margin_t(.2rem)
+                            .del_icon
+                                display: inline-block
+                                width: .4rem
+                                height: .58rem
+                                line-height: .58rem
+                                text-align: center
+                                color: #999999
+    .standard_add_btn
+        position: absolute
+        bottom: 1px
+        left: .01rem
+        height: .98rem
+        line-height: .98rem
+        width: 100%
+        text-align: center
+        background: $blueColor
+        color: $whiteColor
+        font-size: .3rem
+        .add_icon
+            display: inline-block
+            line-height: .98rem
+            font-size: .28rem
+    .picker_box
+        width: 7.5rem
+        position: fixed
+        bottom: 1px
+        background: #ffffff
+        .picker_header
+            height: .8rem
+            line-height: .8rem
+            .header_box
+                height: .8rem
+                line-height: .8rem
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                font-size: .3rem
+                .cancel_btn
+                    width: 1rem
+                    text-align: center
+                .hint_text
+                    width: 4.9rem
+                    text-align: center
+                .confirm_btn
+                    width: 1rem
+                    text-align: center
+                    color: $blueColor
+
+

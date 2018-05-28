@@ -1,0 +1,130 @@
+@import './common.sass'
+
+
+.bottom_nav
+    width: 100%
+    height: 1rem
+    background: $whiteColor
+    position: fixed
+    bottom: 0
+    left: 0
+    z-index: 98
+    @include box-shadow(0,-1px,5px,$borderColor)
+    ul
+        li
+            display: inline-block
+            width: 20%
+            float: left
+            text-align: center
+            font-size: .24rem
+            background-size: cover
+            position: relative
+            @include padding_t(.6rem)
+            .home
+                display: block
+                width: .43rem
+                height: .45rem
+                background: url(../images/bottom/bottom_01.png) no-repeat
+                background-position: 0 0
+                background-size: 100%
+                position: absolute
+                top: .1rem
+                left: .52rem
+            .categroy
+                display: block
+                width: .43rem
+                height: .45rem
+                background: url(../images/bottom/bottom_03.png) no-repeat
+                background-position: 0 0
+                background-size: 100%
+                position: absolute
+                top: .1rem
+                left: .52rem
+            .store
+                display: block
+                width: .43rem
+                height: .45rem
+                background: url(../images/bottom/bottom_05.png) no-repeat
+                background-position: 0 0
+                background-size: 100%
+                position: absolute
+                top: .1rem
+                left: .52rem
+            .my
+                display: block
+                width: .43rem
+                height: .45rem
+                background: url(../images/bottom/bottom_07.png) no-repeat
+                background-position: 0 0
+                background-size: 100%
+                position: absolute
+                top: .1rem
+                left: .52rem
+            &.router-link-active
+                color: #09e
+                .home
+                    background: url(../images/bottom/bottom_02.png) no-repeat
+                    background-size: 100%
+                .categroy
+                    background: url(../images/bottom/bottom_04.png) no-repeat
+                    background-size: 100%
+                .store
+                    background: url(../images/bottom/bottom_06.png) no-repeat
+                    background-size: 100%
+                .my
+                    background: url(../images/bottom/bottom_08.png) no-repeat
+                    background-size: 100%
+        .add_icon
+            .circle
+                width: 1.2rem
+                height: 1.2rem
+                @include border_radius(50%)
+                @include box-shadow(0,-2px,4px,#ccc)
+                background: $whiteColor
+                position: absolute
+                top: -.2rem
+                left: .12rem
+                img
+                    display: block
+                    width: .9rem
+                    height: .9rem
+                    margin: .15rem auto 0
+                &.on
+                    z-index: 100
+                    img
+                        transform: rotateZ(45deg)
+                        @include animation(rot,1s)
+    .layer_item
+        width: 4.3rem
+        position: fixed
+        bottom: 5.9rem
+        left: 1.6rem
+        z-index: 100
+        .item_1
+            float: left
+            width: 1.6rem
+            height: 1.6rem
+            text-align: center
+            font-size: .28rem
+            color: #666
+            img
+                height: 1.3rem
+                display: block
+                margin: 0 auto
+                @include animation(rot2,2s)
+
+        .item_2
+            float: right
+            @extend .item_1
+
+
+@keyframes rot
+    from
+        transform: rotateZ(0deg)
+    to
+        transform: rotateZ(45deg)
+@keyframes rot2
+    from
+        transform: rotateZ(0deg)
+    to
+        transform: rotateZ(360deg)

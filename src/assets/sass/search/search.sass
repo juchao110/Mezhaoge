@@ -1,0 +1,145 @@
+@import '../common.sass'
+
+.word_search
+    ::-webkit-search-cancel-button
+        display: none
+    .search_head
+        width: 100%
+        height: .9rem
+        line-height: .9rem
+        position: relative
+        background: $whiteColor
+        @include padding_l(1.2rem)
+        .back
+            display: block
+            width: .8rem
+            padding-left: .2rem
+            font-size: .4rem
+            color: $fontColor
+            position: absolute
+            left: 0
+            top: 0
+        .logo_img
+            // width: .8rem
+            height: .46rem
+            float: left
+            position: absolute
+            left: .1rem
+            top: .28rem
+
+        .input_box
+            width: 5.1rem
+            height: .6rem
+            float: left
+            line-height: .6rem
+            position: relative
+            @include margin_t(.15rem)
+            @include border_radius(.4rem)
+            @include padding_l(.5rem)
+            background: $borderColor
+            .search_icon
+                display: block
+                width: .4rem
+                height: .4rem
+                position: absolute
+                font-size: .3rem
+                color: #999
+                left: .3em
+                top: 0
+            input[type=search]
+                border: none
+                width: 100%
+                height: .6rem
+                line-height: .6rem
+                @include padding_r(.6rem)
+                font-size: .3rem
+            input[type=submit]
+                opacity: 0
+            .delete_word
+                position: absolute
+                right: .2rem
+                top: .02rem
+                font-size: .3rem
+                color: #999
+            .go_img_search
+                @extend .delete_word
+                font-size: .36rem
+        .go_search
+            height: .6rem
+            line-height: .6rem
+            @include border_radius(.04rem)
+            float: left
+            color: $blueColor
+            font-size: .34rem
+            @include margin_t(.16rem)
+            @include margin_l(.2rem)
+    .search_item
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        p
+            height: .8rem
+            line-height: .8rem
+            font-size: .24rem
+            color: #666
+            i
+                font-size: .24rem
+                float: right
+        ul
+            li
+                display: block
+                float: left
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                height: .6rem
+                line-height: .6rem
+                font-size: .3rem
+                color: $fontColor
+                background: $whiteColor
+                @include margin_r(.2rem)
+                @include margin_b(.2rem)
+
+
+//图片搜索
+.img_search
+    @include padding(.3rem)
+    @include padding_t(1.2rem)
+    .img_search_info
+        font-size: .24rem
+        color: $fontColor
+        line-height: .4rem
+        @include margin_b(.4rem)
+    .pic_check
+        height: 6.7rem
+        width: 100%
+        @include padding(.6rem)
+        background: rgba(0,0,0,.5)
+        @include margin_b(.6rem)
+        .crop_box
+            width: 100%
+            height: 100%
+    .btn_list
+        &>div
+            width: 3.3rem
+            height: .8rem
+            text-align: center
+            line-height: .78rem
+            border: 1px solid $blueColor
+            font-size: .3rem
+            float: left
+            position: relative
+            @include border_radius(.04rem)
+        .choose_pic
+            background: $whiteColor
+            color: $blueColor
+            @include margin_r(.2rem)
+            input[type=file]
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                left: 0
+                top: 0
+                opacity: 0
+        .search_pic
+            background: $blueColor
+            color: $whiteColor

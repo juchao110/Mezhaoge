@@ -1,0 +1,150 @@
+@import '../common.sass'
+
+.blue_text
+    color: $blueColor !important
+.popup_select_content
+    width: 100%
+    overflow: hidden
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    z-index: 2999
+    .popup_box_bg
+        background: rgba(0,0,0,.5)
+        width: 100%
+        height: 100vh
+        position: fixed
+        z-index: 2000
+    .popup_box
+        width: 6.3rem
+        height: 100vh
+        position: fixed
+        background: #ffffff
+        z-index: 2001
+        @include margin_l(1.2rem)
+        .popup_title_box
+            width: 100%
+            height: .98rem
+            line-height: .98rem
+            text-align: center
+            font-size: .36rem
+            font-weight: bold
+            @include border_b(1px,#e5e5e5)
+        .popup_select_box
+            overflow: scroll
+            height: calc(100vh - .98rem - .99rem)
+            .select_text
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                height: .97rem
+                line-height: .97rem
+                @include border_b(1px,#e5e5e5)
+                font-size: .3rem
+                .text_content
+                    color: #999999
+                    @include margin_r(.4rem)
+                    font-size: .24rem
+                .arrow_icon
+                    color: #999999
+        .popup_all_btn
+            position: fixed
+            bottom: .01rem
+            width: 6.3rem
+            height: .99rem
+            @include border_t(1px,#e5e5e5)
+            line-height: .99rem
+            .clear_btn
+                display: inline-block
+                width: 50%
+                height: .99rem
+                text-align: center
+                font-size: .32rem
+            .confirm_btn
+                display: inline-block
+                width: 50%
+                height: .99rem
+                text-align: center
+                font-size: .32rem
+                background: $blueColor
+                color: $whiteColor
+    .popup_box_no1
+        width: 6.3rem
+        height: 100vh
+        position: fixed
+        background: #ffffff
+        z-index: 2001
+        @include margin_l(1.2rem)
+        .popup_title_box
+            width: 100%
+            height: .98rem
+            line-height: .98rem
+            font-size: .36rem
+            font-weight: bold
+            @include padding_l(.3rem)
+            @include padding_r(.3rem)
+            @include border_b(1px,#e5e5e5)
+            position: relative
+            .title_text
+                position: absolute
+                top: 50%
+                left: 50%
+                @include margin_l(-0.36rem)
+                @include margin_t(-0.49rem)
+        .popup_select_box
+            overflow: scroll
+            height: 100vh
+            .select_text
+                @include padding_l(.3rem)
+                @include padding_r(.3rem)
+                height: .97rem
+                line-height: .97rem
+                @include border_b(1px,#e5e5e5)
+                font-size: .3rem
+                .text_content
+                    color: #999999
+                    @include margin_r(.4rem)
+                    font-size: .24rem
+                .arrow_icon
+                    color: #999999
+        .popup_search_box
+            @include padding(.2rem)
+            background: #f5f5f5
+            .popup_search_box1
+                background: #ffffff
+                height: .8rem
+                line-height: .8rem
+                @include border_radius(.05rem)
+                .search_icon
+                    width: .6rem
+                    font-size: .3rem
+                    text-align: center
+                    color: #cccccc
+                span
+                    color: #cccccc
+                    font-size: .3rem
+                .search_input
+                    width: 5rem
+                    height: .4rem
+                    line-height: .4rem
+                    border: none
+                    @include padding_l(.2rem)
+        .popup_all_btn
+            position: fixed
+            bottom: .01rem
+            width: 6.3rem
+            height: .99rem
+            @include border_t(1px,#e5e5e5)
+            line-height: .99rem
+            .clear_btn
+                display: inline-block
+                width: 50%
+                height: .99rem
+                text-align: center
+            .confirm_btn
+                display: inline-block
+                width: 50%
+                height: .99rem
+                text-align: center
+                background: $blueColor
+                color: $whiteColor

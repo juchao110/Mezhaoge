@@ -1,0 +1,52 @@
+@import '../common.sass'
+
+.information_page
+    @include padding_a(1.5rem,.3rem,.3rem,.3rem)
+    .info_title
+        font-size: .4rem
+        color: #000
+        @include margin_b(.4rem)
+    .info_from
+        height: .4rem
+        line-height: .4rem
+        font-size: .24rem
+        color: #999
+        @include margin_b(.4rem)
+        .from
+            color: $fontColor
+            span
+                color: $blueColor
+    .info_desc
+        @include padding(.2rem)
+        background: $whiteColor
+        font-size: .24rem
+        color: #999
+        @include margin_b(.6rem)
+    .info_content
+        font-size: .32rem
+        color: $fontColor
+        .content_info
+            @include margin_b(.6rem)
+            .content_title
+                color: #000
+            img
+                max-width: 100%
+                height: auto
+                display: block
+                margin: 0 auto
+    .info_zan
+        width: 6.9rem
+        height: .8rem
+        line-height: .8rem
+        text-align: center
+        background: $whiteColor
+        border: 1px solid #ddd
+        @include border_radius(4rem)
+        font-size: .36rem
+        color: #999
+        i
+            font-size: .38rem
+        &.on
+            background: $blueColor
+            border: 1px solid $blueColor
+            color: $whiteColor

@@ -1,0 +1,74 @@
+@import '../common.sass'
+
+.sell_center
+    @include padding_t(.9rem)
+    @include padding_b(1.6rem)
+    &>*
+        background: $whiteColor
+    .user_info
+        height: 2.6rem
+        @include padding_l(1.75rem)
+        @include padding_r(.3rem)
+        @include padding_t(.95rem)
+        position: relative
+        background: url(../../images/sell/sell_bg.jpeg) no-repeat center
+        background-size: cover
+        img
+            display: block
+            width: 1.28rem
+            height: 1.28rem
+            @include border_radius(50%)
+            position: absolute
+            left: .3rem
+            top: .7rem
+        .name
+            font-size: .3rem
+            color: $fontColor
+            font-weight: 700
+        .phone
+            font-size: .24rem
+            color: $fontColor
+    .center_list
+        @include margin_b(.4rem)
+        li
+            display: inline-block
+            float: left
+            width: 2.5rem
+            height: 2.1rem
+            border-right: 1px solid $borderColor
+            @include border_b(1px,$borderColor)
+            position: relative
+            text-align: center
+            font-size: .3rem
+            color: #4c4c4c
+            @include padding_t(1.1rem)
+            &:nth-child(3n)
+                border-right: none
+            i
+                font-size: .5rem
+                position: absolute
+                top: .3rem
+                left: 1rem
+            .list_1
+                color: #ffbe10
+            .list_2
+                left: 1rem
+                top: .35rem
+                position: absolute
+                img
+                    height: .54rem
+            .list_3
+                @extend .list_2
+            .list_4
+                @extend .list_2
+    .login_out
+        display: block
+        width: 6.9rem
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        background: $blueColor
+        font-size: .3rem
+        color: $whiteColor
+        margin: 0 auto
+        @include border_radius(.03rem)

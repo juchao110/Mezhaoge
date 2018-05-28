@@ -1,0 +1,117 @@
+@import '../common.sass'
+
+
+.join
+    min-height: 100vh
+    background: $borderColor
+    position: relative
+    @include padding_t(.9rem)
+    @include padding_b(1.6rem)
+    .result_fail
+        height: 6.14rem
+        background: url('../../images/user/fail.png') no-repeat center
+        background-size: cover
+        @include padding_t(3.8rem)
+        p
+            font-size: .24rem
+            color: $whiteColor
+            text-align: center
+    .result_check
+        @extend .result_fail
+        background: url('../../images/user/checking.png') no-repeat center
+        background-size: cover
+    h3
+        font-size: .24rem
+        color: #666
+        font-weight: normal
+        text-align: center
+        height: .6rem
+        line-height: .6rem
+    .col_1
+        height: 1rem
+        line-height: 1rem
+        background: $whiteColor
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        @include border_b(1px,$borderColor)
+        position: relative
+        .left_col
+            float: left
+            width: 1.6rem
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        .right_col
+            float: left
+            width: 5.3rem
+            input
+                display: block
+                width: 100%
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                font-size: .24rem
+                border: none
+            .choose_city
+                color: #ccc
+            .over_choose_city
+                color: $fontColor
+            .go_choose
+                position: absolute
+                right: .3rem
+                top: 0
+    .col_img
+        height: 1.6rem
+        line-height: 1.6rem
+        background: $whiteColor
+        @include padding_l(.3rem)
+        .left_col
+            float: left
+            width: 1.6rem
+            font-size: .3rem
+            color: #4c4c4c
+            span
+                color: $redColor
+        .right_col
+            float: left
+            width: 5.6rem
+            .upload_com
+                float: right
+                @include margin_a(.1rem,.3rem,0,0)
+            .over_upload
+                float: right
+                position: relative
+                @include margin_a(.1rem,.3rem,0,0)
+                img
+                    display: block
+                    width: 1.4rem
+                    height: 1.4rem
+                .delete
+                    position: absolute
+                    right: 0
+                    top: 0
+                    color: $blueColor
+                    display: block
+                    width: .38rem
+                    height: .38rem
+                    line-height: .4rem
+                    z-index: 3
+                    img
+                        width: 100%
+                        height: 100%
+    .submit_btn
+        display: block
+        width: 6.9rem
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        background: $blueColor
+        font-size: .3rem
+        color: $whiteColor
+        border: none
+        @include border_radius(.03rem)
+        position: fixed
+        bottom: .3rem
+        left: .3rem
+        z-index: 99

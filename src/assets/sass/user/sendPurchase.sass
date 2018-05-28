@@ -1,0 +1,196 @@
+@import '../common.sass'
+.send_purchase_select_box
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 20
+.send_purchase
+    @include padding_b(1.6rem)
+    @include padding_t(.9rem)
+    .company_info
+        height: 1.4rem
+        background: url(../../images/user/send_purchase_01.png) no-repeat center
+        background-size: cover
+        @include padding_l(.3rem)
+        @include padding_t(.35rem)
+        p
+            font-size: .24rem
+            color: $whiteColor
+            &.name
+                .level
+                    display: inline-block
+                    position: relative
+                    top: .04rem
+                    @include margin_l(.1rem)
+                    &.level_1
+                        img
+                            height: .24rem
+                            @include margin_t(.04rem)
+                    &.level_2
+                        img
+                            height: .25rem
+                            @include margin_t(.04rem)
+                    &.level_3
+                        img
+                            height: .23rem
+    .img_col
+        @include padding_l(.3rem)
+        @include border_b(1px,$borderColor)
+        background: $whiteColor
+        @include padding_b(.3rem)
+        p
+            font-size: .3rem
+            color: #4c4c4c
+            height: .6rem
+            line-height: .6rem
+            @include margin_b(.2rem)
+            em
+                font-size: .24rem
+                color: #ccc
+                font-style: normal
+            span
+                color: $redColor
+        .upload_com
+            @include padding_l(.2rem)
+        .over_upload
+            position: relative
+            float: left
+            @include padding_l(.2rem)
+            .wen_img
+                display: block
+                width: 1.4rem
+                height: 1.4rem
+            .delete
+                position: absolute
+                right: 0
+                top: 0
+                color: $blueColor
+                display: block
+                width: .38rem
+                height: .38rem
+                line-height: .4rem
+                z-index: 3
+                img
+                    width: 100%
+                    height: 100%
+    .more_img_col
+        @extend .img_col
+        @include margin_b(.2rem)
+        .upload_com
+            float: left
+        .more_over_upload
+            float: left
+            @include padding_l(.2rem)
+            ul
+                li
+                    width: 1.4rem
+                    height: 1.4rem
+                    display: block
+                    float: left
+                    position: relative
+                    @include margin_b(.2rem)
+                    @include margin_r(.2rem)
+                    .each_img
+                        width: 1.4rem
+                        height: 1.4rem
+                    .delete
+                        position: absolute
+                        right: 0
+                        top: 0
+                        color: $blueColor
+                        display: block
+                        width: .38rem
+                        height: .38rem
+                        line-height: .4rem
+                        z-index: 3
+                        img
+                            width: 100%
+                            height: 100%
+    .col_1
+        height: 1rem
+        line-height: 1rem
+        background: $whiteColor
+        @include padding_l(.3rem)
+        @include padding_r(.3rem)
+        @include border_b(1px,$borderColor)
+        position: relative
+        overflow: hidden
+        .title
+            min-width: 1.5rem
+            font-size: .3rem
+            color: #4c4c4c
+            float: left
+            @include margin_r(.2rem)
+            span
+                color: $redColor
+        .right_switch
+            width: 3rem
+            float: right
+            @include padding_a(0,0,0,.9rem)
+            .switch_icon
+                @include padding_t(.15rem)
+                @include margin_r(.1rem)
+                @include margin_l(.1rem)
+            .grey_color
+                color: #999
+        .value
+            float: right
+            @include margin_r(.5rem)
+            font-size: .24rem
+            color: $fontColor
+            text-align: right
+            width: 1.5rem
+            height: 1rem
+            overflow: hidden
+        i
+            position: absolute
+            right: .3rem
+            top: .02rem
+            color: #999
+        .input_div
+            float: left
+            width: 3rem
+            input
+                border: none
+                height: .6rem
+                line-height: .6rem
+                @include margin_t(.2rem)
+                font-size: .24rem
+                color: $fontColor
+        .img_code
+            display: block
+            width: 2.2rem
+            height: .6rem
+            float: right
+            @include margin_t(.2rem)
+
+    .remark
+        @include padding(.3rem)
+        @include border_b(1px,$borderColor)
+        background: $whiteColor
+        p
+            font-size: .3rem
+            color: #4c4c4c
+        textarea
+            resize: none
+            display: block
+            width: 100%
+            height: 1rem
+            font-size: .24rem
+            color: $fontColor
+            border: none
+    .submit
+        display: block
+        width: 6.9rem
+        height: 1rem
+        line-height: 1rem
+        text-align: center
+        background: $blueColor
+        font-size: .3rem
+        color: $whiteColor
+        border: none
+        @include border_radius(.03rem)
+        position: fixed
+        bottom: .3rem
+        left: .3rem
+        z-index: 99

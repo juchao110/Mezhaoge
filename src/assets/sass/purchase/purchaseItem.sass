@@ -1,0 +1,84 @@
+@import '../common.sass'
+
+.purchase_item_a
+    background: $whiteColor
+    @include padding(.3rem)
+    @include border_b(1px,$borderColor)
+    .user_info
+        height: .8rem
+        line-height: .8rem
+        position: relative
+        @include padding_l(.7rem)
+        .logo
+            position: absolute
+            width: .6rem
+            height: .6rem
+            @include border_radius(50%)
+            left: 0
+            top: .1rem
+        p
+            font-size: .24rem
+            color: $fontColor
+            float: left
+        .start_time
+            color: #999
+            font-size: .24rem
+            float: right
+        .time
+            float: right
+            width: 1.3rem
+            height: .4rem
+            text-align: center
+            line-height: .38rem
+            font-size: .24rem
+            color: $orangeColor
+            border: 1px solid $orangeColor
+            @include border_radius(.6rem)
+            @include margin_t(.2rem)
+        .is_over
+            @extend .time
+            border: 1px solid #ccc
+            color: #ccc
+        .over_offer
+            font-size: .24rem
+            color: $fontColor
+            float: right
+            @include margin_r(.2rem)
+            span
+                color: $orangeColor
+    .img_list
+        @include padding_l(.7rem)
+        @include margin_b(.2rem)
+        li
+            display: block
+            float: left
+            @include margin_r(.2rem)
+            img
+                display: block
+                width: 1.8rem
+                height: 1.8rem
+    .img_box
+        @include margin_b(.2rem)
+        @include padding_l(.7rem)
+        img
+            width: 3rem
+            height: 3rem
+            display: block
+    .good_info
+        @include padding_l(.7rem)
+        font-size: .28rem
+        color: $fontColor
+        line-height: .34rem
+        @include margin_b(.1rem)
+        span
+            @include margin_r(.1rem)
+    .amount
+        @include padding_l(.7rem)
+        font-size: .24rem
+        color: $fontColor
+        .orange
+            color: $orangeColor
+    .offer_time
+        @include padding_l(.7rem)
+        font-size: .24rem
+        color: #999

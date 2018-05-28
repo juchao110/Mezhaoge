@@ -1,0 +1,43 @@
+@import './common.sass'
+.upload_pic
+    .upload
+        width: 1.4rem
+        height: 1.4rem
+        text-align: center
+        line-height: 1.2rem
+        position: relative
+        border: 1px dotted #ddd
+        i
+            font-size: .6rem
+        input
+            display: block
+            width: 1.4rem
+            height: 1.4rem
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 2
+            opacity: 0
+        .load_img
+            width: .8rem
+            height: .8rem
+            position: absolute
+            left: .3rem
+            top: .3rem
+    .over_upload
+        float: right
+        position: relative
+        @include margin_a(.3rem,.3rem,0,0)
+        img
+            display: block
+            width: 1.4rem
+            height: 1.4rem
+        .delete
+            position: absolute
+            right: 0
+            top: 0
+            color: $blueColor
+            display: block
+            height: .4rem
+            line-height: .4rem
+            z-index: 3
